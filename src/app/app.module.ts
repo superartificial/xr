@@ -8,6 +8,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { TemplateComponent } from './template/template/template.component';
+import { PageComponent } from './pages/page/page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TemplateComponent } from './template/template/template.component';
     HeaderComponent,
     FooterComponent,
     EventListComponent,
-    TemplateComponent
+    TemplateComponent,
+    PageComponent
   ],
   imports: [
     BrowserModule,
