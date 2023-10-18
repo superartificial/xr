@@ -9,6 +9,9 @@ import { FooterComponent } from './template/footer/footer.component';
 import { EventListComponent } from './events/event-list/event-list.component';
 import { TemplateComponent } from './template/template/template.component';
 import { PageComponent } from './pages/page/page.component';
+import { NewsListComponent } from './news/news-list/news-list.component';
+import { NewsItemComponent } from './news/news-item/news-item.component';
+import { LocalGroupsComponent } from './local-groups/local-groups.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { PageComponent } from './pages/page/page.component';
     FooterComponent,
     EventListComponent,
     TemplateComponent,
-    PageComponent
+    PageComponent,
+    NewsListComponent,
+    NewsItemComponent,
+    LocalGroupsComponent
   ],
   imports: [
     BrowserModule,

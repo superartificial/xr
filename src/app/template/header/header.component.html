@@ -1,1 +1,11 @@
-<p *ngFor="let mi of menuService.menuItemsHeader" >{{ mi.Name }}</p>
+<div id="menu-content">
+
+<img src="assets/images/xr-logo-small.png" alt="XR Logo. Click to return to home page.">
+
+<ul class="menu">
+    <li *ngFor="let menuItem of menuService.menuItemsHeader" >
+        <a routerLinkActive="menu-active-eu"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
+    </li>
+</ul>
+
+</div>

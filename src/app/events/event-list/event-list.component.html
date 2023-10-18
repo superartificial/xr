@@ -1,1 +1,7 @@
-<p>event-list works!</p>
+<h1>Upcoming Events</h1>
+
+<div *ngFor="let event of events" >
+    <h1 [innerHTML]="event.title"></h1>
+    <img [src]="event['image'].url" alt="">
+    <div [innerHTML]="event['description']"></div>
+</div>

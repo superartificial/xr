@@ -1,1 +1,14 @@
-<p>footer works!</p>
+<div id="menu-content">
+
+    <div>
+        <div *ngFor="let menuGroup of menuService.menuGroupsFooter">
+            <h5>{{ menuGroup.Name }}</h5>
+            <ul class="menu">
+                <li *ngFor="let menuItem of menuGroup.Menu">
+                    <a routerLinkActive="menu-active-eu"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

@@ -16,15 +16,16 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(public wpService: WordpressService) {}
 
   ngOnInit() {
-    this.wpService.getPosts();
-    this.postsSub = this.wpService.getPostUpdateListener()
-      .subscribe((posts: Post[]) => {
-        this.posts = posts;
-        console.log('posts: ', this.posts)
-      });
+    // this.wpService.getPosts();
+    // this.postsSub = this.wpService.getPostUpdateListener()
+    //   .subscribe((posts: Post[]) => {
+    //     this.posts = posts;
+    //     console.log('posts: ', this.posts)
+    //   });
   }
 
   ngOnDestroy() {
+
     // this.postsSub.unsubscribe();
   }
 

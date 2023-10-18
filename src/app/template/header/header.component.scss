@@ -1,0 +1,34 @@
+#menu-content {
+    background-color: #22a73d;
+    height: 3.5rem;
+    width: 100%;
+    margin: 0;
+    padding: 0.4rem 0;
+    display: flex;
+    justify-content: space-between;    
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: flex-end;
+    align-items: center;
+    font-family: "FucxedcapsRegular";
+    font-weight: 400;
+    text-transform: uppercase;
+    flex-direction: row;
+    font-size: 1.5rem;
+    margin: 0;
+    
+    li {
+        margin-right: 1.5rem;
+        a {
+            color: #000000;            
+        }
+    }
+
+}
+
+img {
+    margin-left: 1rem;
+}
