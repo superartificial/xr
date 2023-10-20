@@ -1,0 +1,10 @@
+<div  class="container" (click)="loadNewsItem()">
+    <div class="text">
+    <h4 class="news-head" [innerHTML]="newsItem.title.rendered"></h4>    
+    <time>{{ newsItem.date | date: 'longDate' }}</time>   
+    <div [innerHTML]="newsItem.excerpt?.rendered" class="post-summary"></div>   
+    </div>
+    <div class="image" *ngIf="newsItem['jetpack_featured_media_url']!=''">
+        <img [src]="newsItem['jetpack_featured_media_url']" alt="">
+    </div>    
+</div>

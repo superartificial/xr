@@ -1,0 +1,40 @@
+<div class="group-card">
+
+    <div class="image">
+        <img [src]="getImageURL()" alt="Image">
+    </div>
+    <div class="content">
+        <h3>{{ getLocationName() }}</h3>
+
+        <div *ngIf="group.Website!=null && group.Website!=''" (click)="openExternal(group.Website)" >
+            <h5>WEBSITE</h5>
+            <div>{{ group.Website }}</div>
+        </div>
+
+        <div *ngIf="group.Facebook!=null && group.Facebook!=''"  (click)="openExternal(group.Facebook)">
+            <h5>FACEBOOK</h5>
+            <div>{{ group.Facebook }}</div>
+        </div>   
+    
+        <div *ngIf="group.FacebookGroup!=null && group.FacebookGroup!=''"  (click)="openExternal(group.FacebookGroup)">
+            <h5>FACEBOOK GROUP</h5>
+            <div>{{ group.FacebookGroup }}</div>
+        </div> 
+
+        <div *ngIf="group.Instagram!=null && group.Instagram!=''"  (click)="openExternal(group.Instagram)">
+            <h5>INSTAGRAM</h5>
+            <div>{{ group.Instagram }}</div>
+        </div>                   
+            
+        <div *ngIf="group.Twitter!=null && group.Twitter!=''"  (click)="openExternal(group.Twitter)">
+                <h5>X / TWITTER</h5>
+                <div>{{ group.Twitter }}</div>
+        </div>            
+
+        <div *ngIf="group.Email!=null && group.Email!=''"  (click)="openExternal('mailto:'+group.Email)">
+                <h5>EMAIL</h5>
+                <div>{{ group.Email }}</div>
+        </div>            
+
+    </div>
+</div>

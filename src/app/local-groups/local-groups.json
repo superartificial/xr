@@ -1,0 +1,168 @@
+[
+    {
+        "LocationEng": "Auckland",
+        "LocationTeReo": "Tāmaki Makaurau",
+        "Website": "https://extinctionrebellion.nz/auckland/",
+        "Facebook": "https://www.facebook.com/XRTamakiMakaurau",
+        "FacebookGroup": "https://www.facebook.com/groups/xrauckland",
+        "Twitter": "https://twitter.com/XRAuckland",
+        "Instagram": "",
+        "ImageURL": "auckland.png"
+    },
+    {
+        "LocationEng": "Christchurch",
+        "LocationTeReo": "Ōtautahi",
+        "Website": "https://extinctionrebellion.nz/christchurch/",
+        "Facebook": "https://www.facebook.com/XR.Chch",
+        "FacebookGroup": "http://fb.me/groups/2017027758389299",
+        "Twitter": "",
+        "Instagram": "https://instagram.com/extinctionrebellionchch/",
+        "ImageURL": "christchurch.png",
+        "Email": "christchurch@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Whangārei",
+        "Website": "https://extinctionrebellion.nz/act/groups/whangarei",
+        "FacebookGroup": "https://www.facebook.com/groups/330890147729849",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "whangarei.png",
+        "Email": "whangarei@extinctionrebellion.nz"
+    },
+
+    {
+        "LocationEng": "Thames",
+        "LocationTeReo": "",
+        "Website": "https://extinctionrebellion.nz/thames/",
+        "Facebook": "",
+        "FacebookGroup": "https://www.facebook.com/groups/564629983970207/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "thames.png",
+        "Email": "thames@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Hamilton",
+        "LocationTeReo": "Kirikiriroa",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRKirikiriroa",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "hamilton.png",
+        "Email": ""
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Tauranga",
+        "Website": "https://actionnetwork.org/forms/join-extinction-rebellion-tauranga/",
+        "Facebook": "",
+        "FacebookGroup": "https://m.facebook.com/groups/335689393910640",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "tauranga.png",
+        "Email": ""
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Manawatu",
+        "Website": "https://extinctionrebellion.nz/manawatu/",
+        "Facebook": "https://www.facebook.com/XRManawatu/",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "manawatu.png",
+        "Email": "manawatu@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Hawke's Bay",
+        "LocationTeReo": "Heretaunga",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRHawkesBay/",
+        "FacebookGroup": "https://www.facebook.com/groups/2154254964905003/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "hawkes-bay.png",
+        "Email": "hawkesbay@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Waiarapa",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/profile.php?id=100068489869855",
+        "FacebookGroup": "https://www.facebook.com/groups/302486380465204",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "waiarapa.png",
+        "Email": "wairarapa@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Wellington",
+        "LocationTeReo": "Te Whanganui-a-Tara",
+        "Website": "https://extinctionrebellion.nz/wellington/",
+        "Facebook": "https://www.facebook.com/xrnewswelly/",
+        "FacebookGroup": "https://www.facebook.com/groups/XRPoneke/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "wellington.png",
+        "Email": "wellington@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Motueka",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRMotueka/",
+        "FacebookGroup": "https://www.facebook.com/groups/2255760724676341/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "motueka.png",
+        "Email": ""
+    },
+    {
+        "LocationEng": "Nelson",
+        "LocationTeReo": "Whakatū",
+        "Website": "https://extinctionrebellion.nz/nelson/",
+        "Facebook": "https://www.facebook.com/XRNelsonNZ",
+        "FacebookGroup": "https://www.facebook.com/groups/296108911000774/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "nelson.png",
+        "Email": "nelson@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Queenstown Lakes",
+        "LocationTeReo": "",
+        "Website": "https://extinctionrebellion.nz/queenstown-lakes/",
+        "Facebook": "https://www.facebook.com/XRNZQTL",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "queenstown-lakes.png",
+        "Email": "queenstownlakes@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Dunedin",
+        "LocationTeReo": "Ōtepoti",
+        "Website": "https://extinctionrebellion.nz/dunedin/",
+        "Facebook": "http://fb.com/groups/XROTAGO",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "dunedin.png",
+        "Email": "dunedin@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Invercargill",
+        "LocationTeReo": "Waihōpai",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRInvercargill/",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "invercargill.png",
+        "Email": ""
+    }
+
+]
+

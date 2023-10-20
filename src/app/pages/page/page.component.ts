@@ -26,7 +26,6 @@ export class PageComponent implements OnInit, OnDestroy {
     this.subscriptions.add(this.route.params.pipe(first()).subscribe((params: Params) => {
       let slug = params['slug'];
       this.loadPageContent(slug);
-      
     }));
 
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
@@ -61,9 +60,8 @@ export class PageComponent implements OnInit, OnDestroy {
     return content;    
   }
 
-  ngOnDestroy() {
-    
-    // this.postsSub.unsubscribe();
+  ngOnDestroy() {    
+    this.subscriptions.unsubscribe();
   }
   
 }

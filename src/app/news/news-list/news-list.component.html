@@ -1,7 +1,4 @@
-
-
-<div *ngFor="let newsItem of newsItems" >
-    <h1 class="news-head" [innerHTML]="newsItem.title.rendered"></h1>
-    <img [src]="newsItem['jetpack_featured_media_url']" alt="">
-    <div [innerHTML]="newsItem.content.rendered"></div>
+<div class="centered-content">
+<h1>Latest News</h1>
+<app-new-item-summary *ngFor="let newsItem of newsItems" [newsItem]="newsItem"></app-new-item-summary>
 </div>

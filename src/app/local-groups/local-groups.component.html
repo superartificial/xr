@@ -1,1 +1,14 @@
-<p>local-groups works!</p>
+
+<div class="header-bg-img header-bg-local-groups">
+    <h1>Find Your Local Group</h1>
+</div>
+
+<div class="centered-content">
+
+    <p>Connect with your local group to get involved in actions in your region.</p>
+    <p>Want to form a local group or already have a group that isn't listed here? Get in touch!</p>
+    
+    <app-local-group *ngFor="let group of groups" [group]="group"></app-local-group>
+
+</div>
+
