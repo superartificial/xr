@@ -61,19 +61,21 @@ export class WordpressService {
       * srcset content is not being returned in full from the WP api, so it needs to be stripped out for the image to load
       * Look into alternatives for image scaling, also this should be moved to a library
       */
-      public static removeSrcsetAttributeFromImages(htmlContent: string): string {
+      public static removeAttributesFromElement(htmlContent: string, elementName: string, attributes: string[]): string {
         // Create a temporary element to parse the HTML content
         const tempElement = document.createElement('div');
         tempElement.innerHTML = htmlContent;
       
         // Find all img elements within the temporary element
-        const imgElements = tempElement.querySelectorAll('img');
+        const imgElements = tempElement.querySelectorAll(elementName);
       
         // Loop through each img element and remove the srcset attribute
         imgElements.forEach((imgElement) => {
-          if (imgElement.hasAttribute('srcset')) {
-            imgElement.removeAttribute('srcset');
-          }
+          attributes.forEach((attribute)=>{
+            if (imgElement.hasAttribute(attribute)) {
+              imgElement.removeAttribute(attribute);
+            }  
+          });
         });
       
         // Get the modified HTML content

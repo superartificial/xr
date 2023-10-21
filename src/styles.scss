@@ -99,11 +99,26 @@ h1 {
 }
 
 time {
-    font-size: 0.9rem;
     font-weight: 500;
+    font-size: 0.9rem;
+    &.date-view-item {
+        font-size: 1rem;
+    }
+    
 }
 
 .post-summary {
     font-size: 0.95rem;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+a {
+    color: #22a73d;
+    &:hover {
+        color: #1ece41;
+    }
+}

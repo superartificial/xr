@@ -1,6 +1,5 @@
 <div class="centered-content">
-<h1  [innerHTML]="newsItem?.title?.rendered"></h1>
-
-<div [innerHTML]="newsItem?.content?.rendered "></div>
-
+    <h1  [innerHTML]="newsItem?.title?.rendered"></h1>
+    <time class="date-view-item">{{ newsItem?.date | date: 'longDate' }}</time>
+    <div [innerHTML]="newsItem?.content?.rendered "></div>
 </div>

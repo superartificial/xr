@@ -38,7 +38,7 @@ export class NewsItemComponent implements OnInit, OnDestroy {
   public loadNewsItem(slug: string) {
     this.wpService.getNewsItem(slug).subscribe((result) => {
       this.newsItem = result[0];
-      this.newsItem.content.rendered = WordpressService.removeSrcsetAttributeFromImages(this.newsItem.content.rendered);
+      this.newsItem.content.rendered = WordpressService.removeAttributesFromElement(this.newsItem.content.rendered,'img',['srcset','width','height']);
       console.log(this.newsItem);
     });
   }

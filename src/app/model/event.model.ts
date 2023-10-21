@@ -1,7 +1,12 @@
 export interface CalendarEvent {
     id?:  string;
     title?: { rendered: string };
-    content?: { rendered: string, protected: boolean };
+    content?: { rendered: string; protected: boolean };
+    start_date?: Date;
+    end_date?: Date;
+    all_day?: boolean;
+    organizer?: [ { organizer: string; phone: string; email: string;  } ]
+    categories?: [ { name?: string; slug?: string } ]
     [key: string]: any;
 }
 

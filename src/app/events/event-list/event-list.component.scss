@@ -1,0 +1,22 @@
+
+img {
+    max-height: 400px;
+}
+
+#event-list-container {
+    width: 100%;
+    display: flex;
+    align-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 14px;
+
+}
+
+#event-container {
+    
+}
+
+app-event-summary {
+    width: 49%;
+}

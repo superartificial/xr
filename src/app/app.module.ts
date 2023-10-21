@@ -14,6 +14,7 @@ import { NewsItemComponent } from './news/news-item/news-item.component';
 import { LocalGroupsComponent } from './local-groups/local-groups.component';
 import { LocalGroupComponent } from './local-groups/local-group/local-group.component';
 import { NewItemSummaryComponent } from './news/new-item-summary/new-item-summary.component';
+import { EventSummaryComponent } from './events/event-summary/event-summary.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NewItemSummaryComponent } from './news/new-item-summary/new-item-summar
     NewsItemComponent,
     LocalGroupsComponent,
     LocalGroupComponent,
-    NewItemSummaryComponent
+    NewItemSummaryComponent,
+    EventSummaryComponent
   ],
   imports: [
     BrowserModule,

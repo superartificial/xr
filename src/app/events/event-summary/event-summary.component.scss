@@ -1,0 +1,21 @@
+#event-summary {
+    height: 330px;
+    border: 1pt solid #000;
+    cursor: pointer;
+}
+
+#event-summary-head {
+    height: 280px;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+}
+
+h3 {
+    color: #ffffff;
+    background-color: #22a73d;
+    opacity: 0.8;
+    padding: 0.5rem;
+    margin: 0;
+}
