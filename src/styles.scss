@@ -1,10 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
+
 body,html {
     color: #000000;
     background-color: #f8f8f8;
     margin: 0;
     font-family: "CrimsonRegular";
-    font-size: 1.2rem;
+    font-size: 1.15rem;
 }
 
 html {
@@ -21,10 +22,14 @@ section {
     src: url('./assets/fonts/FUCXEDCAPS-v4.ttf');
 }
 
-
 @font-face {
     font-family: 'CrimsonRegular';
     src: url('./assets/fonts/CrimsonText-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('./assets/fonts/RobotoCondensed-VariableFont_wght.ttf');
 }
 
 ul.menu {
@@ -102,7 +107,7 @@ time {
     font-weight: 500;
     font-size: 0.9rem;
     &.date-view-item {
-        font-size: 1rem;
+        font-size: 1rem
     }
     
 }

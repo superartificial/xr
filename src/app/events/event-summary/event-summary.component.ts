@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { CalendarEvent } from 'src/app/model/event.model';
 import { WordpressService } from 'src/app/wordpress/wordpress.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { formatDate } from '@angular/common';
+import { EventViewComponent } from '../event-view/event-view.component';
 
 @Component({
   selector: 'app-event-summary',
@@ -14,28 +16,25 @@ export class EventSummaryComponent {
   @Input('event')event: CalendarEvent;
 
   constructor(
+    public dialog: MatDialog,    
     public wpService: WordpressService,
     private router: Router,
     private route: ActivatedRoute
   ) { }    
 
-  /*
-  * Show one date and start / end time if single day, otherwise include both dates
-  */ 
-  public formatCalendarEvent(event: CalendarEvent): string {
-    const startDate = new Date(event.start_date);
-    const endDate = new Date(event.end_date);
-    const isSameDate = startDate.toDateString() === endDate.toDateString();
-  
-    if (isSameDate) {
-      const formattedStartDate = formatDate(startDate, 'MMMM d, h:mm a', 'en-US');
-      const formattedEndDate = formatDate(endDate, 'h:mm a', 'en-US');
-      return `${formattedStartDate} - ${formattedEndDate}`;
-    } else {
-      const formattedStart = formatDate(startDate, 'MMMM d, h:mm a', 'en-US');
-      const formattedEnd = formatDate(endDate, 'MMMM d, h:mm a', 'en-US');
-      return `${formattedStart} - ${formattedEnd}`;
-    }
+  onOpenView() {
+    console.log('dialog should open')
+    const dialogRef = this.dialog.open(EventViewComponent, 
+      { 
+        width: '94%',
+        maxWidth: '1400px', 
+        height: '94%',
+        data: this.event } 
+      );
+  }  
+
+  public formatEventDateRange(event: CalendarEvent): string {
+    return WordpressService.formatEventDateRange(event);
   }
 
 }

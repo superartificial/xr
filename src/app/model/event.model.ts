@@ -5,9 +5,18 @@ export interface CalendarEvent {
     start_date?: Date;
     end_date?: Date;
     all_day?: boolean;
-    organizer?: [ { organizer: string; phone: string; email: string;  } ]
-    categories?: [ { name?: string; slug?: string } ]
+    description?: string;
+    organizer?: [ { organizer: string; phone: string; email: string;  } ];
+    categories?: [ { name?: string; slug?: string } ];
+    venue: Venue;
     [key: string]: any;
+}
+
+export interface Venue {
+    url?: string;
+    venue?: string;
+    address?: string;
+    city?:string;    
 }
 
 export interface EventResponseData {

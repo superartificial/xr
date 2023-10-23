@@ -1,0 +1,57 @@
+<mat-dialog-content >
+    <div id="header-section"  style="background-image: url({{ event['image'].url }})" >
+        <h2 [innerHTML]="event.title"></h2>
+        <h3>{{ formatEventDateRange(event) }}</h3>
+    </div>
+    <div id="details-section">
+
+    </div>
+</mat-dialog-content>
+<section id="section-details">
+    <div id="details-description" [innerHTML]="event.description"></div>
+    <div id="details-info">
+        <h4>When</h4>
+        <div class="details-area" >
+            <div>Date: </div>
+            <div>{{ event.start_date | date: 'longDate' }}</div>            
+
+            <div>Time:</div>
+            <div>{{ event.start_date | date: 'shortTime' }}</div>            
+        </div>
+
+        <h4>Where</h4>
+        <div class="details-area" >
+            <div>Venue: </div>
+            <div>{{ event.venue.venue }}</div>            
+
+            <div>Address:</div>
+            <div>{{ event.venue.address }}</div>            
+
+            <div>City:</div>
+            <div>{{ event.venue.city }}</div>            
+                      
+        </div>
+
+
+        <h4>Organiser</h4>
+        <div class="details-area" >
+            <div>Name: </div>
+            <div>{{ event.organizer[0]?.organizer }}</div>            
+
+            <div>Phone:</div>
+            <div>{{ event.organizer[0]?.phone }}</div>            
+                       
+            <div>Email:</div>
+            <div><a [href]="'mailto:' + event.organizer[0]?.email" >{{event.organizer[0]?.email}}</a></div>            
+                       
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <h5><a (click)="close()">CLOSE</a></h5>
+</footer>
+<footer id="footer-back">
+
+</footer>

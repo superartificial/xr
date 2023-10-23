@@ -1,0 +1,115 @@
+app-event-view {
+    padding: 0;
+}
+
+mat-dialog-content, .mat-mdc-dialog-content {
+ 
+    margin: 0;
+    padding: 0 !important;
+
+}
+
+#header-section {
+    background-color: black;
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;       
+    height: 40vw;
+    max-height: 400px;
+    margin: 0;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;         
+}
+
+h2 {
+    color: #ffffff;
+    background-color: #22a73d;
+    opacity: 0.9;
+    padding: 0.5rem;
+    font-size: 2.2rem;
+    line-height: 2.6rem;
+    margin: 0;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;    
+}
+
+h3 {
+    color: #000;
+    background-color: #22a73d;
+    opacity: 0.9;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    margin: 0;
+}
+
+h4 {
+    color: #fff;
+    background-color: #22a73d;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0.2rem 0.5rem; 
+    font-weight: normal;   
+}
+
+#section-details {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    font-family: RobotoCondensed;
+    font-size: 1rem;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#details-description {
+    width: 55%;
+}
+
+#details-info {
+    width: 45%;
+    max-width: 50rem;
+}
+
+.details-area {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    row-gap: 0.1rem; 
+    background-color: #f8f8f8;
+
+    div {
+        padding: 0.2rem;
+        word-wrap: break-word;
+        word-break: break-all;
+        white-space: pre-wrap; 
+    }
+
+    div:nth-child(odd) {
+        font-weight: bold;
+    }
+
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(34, 167, 61,0.85);
+    text-align: center;
+
+    h5 {
+        margin: 0.25rem 0 0.5rem 0;
+        a {
+            color: #fff;
+            background: none;
+            font-size: 1.543m;
+            font-weight: 400;
+            cursor: pointer;
+            margin: 0;
+            text-decoration: underline;
+        }
+    }
+}
+
+

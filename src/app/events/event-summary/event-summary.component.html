@@ -1,8 +1,8 @@
 
 <div id="event-summary">
-    <div id="event-summary-head" style="background-image: url({{ event['image'].url }})">
+    <div id="event-summary-head" style="background-image: url({{ event['image'].url }})" (click)="onOpenView()">
         <h3 [innerHTML]="event.title"></h3>
     </div>
     
-    <time>{{ formatCalendarEvent(event) }}</time> 
+    <time>{{ formatEventDateRange(event) }}</time> 
 </div>

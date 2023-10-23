@@ -15,6 +15,8 @@ import { LocalGroupsComponent } from './local-groups/local-groups.component';
 import { LocalGroupComponent } from './local-groups/local-group/local-group.component';
 import { NewItemSummaryComponent } from './news/new-item-summary/new-item-summary.component';
 import { EventSummaryComponent } from './events/event-summary/event-summary.component';
+import { EventViewComponent } from './events/event-view/event-view.component';
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -29,12 +31,14 @@ import { EventSummaryComponent } from './events/event-summary/event-summary.comp
     LocalGroupsComponent,
     LocalGroupComponent,
     NewItemSummaryComponent,
-    EventSummaryComponent
+    EventSummaryComponent,
+    EventViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
