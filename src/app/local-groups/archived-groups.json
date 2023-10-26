@@ -1,0 +1,47 @@
+[
+    
+    {
+        "LocationEng": "Thames",
+        "LocationTeReo": "",
+        "Website": "https://extinctionrebellion.nz/thames/",
+        "Facebook": "",
+        "FacebookGroup": "https://www.facebook.com/groups/564629983970207/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "thames.png",
+        "Email": "thames@extinctionrebellion.nz"
+    },
+    {
+        "LocationEng": "Hamilton",
+        "LocationTeReo": "Kirikiriroa",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRKirikiriroa",
+        "FacebookGroup": "",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "hamilton.png",
+        "Email": ""
+    },
+    {
+        "LocationEng": "",
+        "LocationTeReo": "Tauranga",
+        "Website": "https://actionnetwork.org/forms/join-extinction-rebellion-tauranga/",
+        "Facebook": "",
+        "FacebookGroup": "https://m.facebook.com/groups/335689393910640",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "tauranga.png",
+        "Email": ""
+    },
+    {
+        "LocationEng": "Hawke's Bay",
+        "LocationTeReo": "Heretaunga",
+        "Website": "",
+        "Facebook": "https://www.facebook.com/XRHawkesBay/",
+        "FacebookGroup": "https://www.facebook.com/groups/2154254964905003/",
+        "Twitter": "",
+        "Instagram": "",
+        "ImageURL": "hawkes-bay.png",
+        "Email": "hawkesbay@extinctionrebellion.nz"
+    }    
+]

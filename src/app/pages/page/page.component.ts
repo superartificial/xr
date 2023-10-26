@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 import { WordpressService } from 'src/app/wordpress/wordpress.service';
 import { Page } from '../../model/page.model';
 import { Params, ActivatedRoute, Router, NavigationEnd } from '@angular/router';
@@ -14,6 +14,8 @@ export class PageComponent implements OnInit, OnDestroy {
 
   subscriptions: Subscription = new Subscription();   
   page: Page;  
+  embedded: boolean = false;
+  @Input('slug')slug: string; 
 
   constructor(
     public wpService: WordpressService,
@@ -23,25 +25,30 @@ export class PageComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
 
-    this.subscriptions.add(this.route.params.pipe(first()).subscribe((params: Params) => {
-      let slug = params['slug'];
-      this.loadPageContent(slug);
-    }));
-
-    this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
-      this.route.params.pipe(first()).subscribe((params: Params) => {
+    if(this.slug==null) {
+      this.subscriptions.add(this.route.params.pipe(first()).subscribe((params: Params) => {
         let slug = params['slug'];
         this.loadPageContent(slug);
-        
-      })
-    });    
+      }));
+  
+      this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
+        this.route.params.pipe(first()).subscribe((params: Params) => {
+          let slug = params['slug'];
+          this.loadPageContent(slug);
+          
+        })
+      });      
+    } else {
+      this.embedded = true;
+      this.loadPageContent(this.slug);
+    }
 
   }
 
   private loadPageContent(slug: string) {
     this.wpService.getPage(slug).subscribe((result) => {
       this.page = result[0];
-      console.log(this.page);
+      // console.log(this.page);
     });
   }
 

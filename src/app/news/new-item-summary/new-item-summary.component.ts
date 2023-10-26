@@ -22,4 +22,8 @@ export class NewItemSummaryComponent {
     this.router.navigate([ '/news/', this.newsItem.slug]);
   }
 
+  public getNewsContent(): string {
+    return WordpressService.removeAttributesFromElement(this.newsItem.content.rendered,'img',['srcset','width','height'])    
+  }
+
 }

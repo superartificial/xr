@@ -20,37 +20,35 @@ export interface MenuGroup {
     readonly menuItemsHeader: MenuItem[] = [
         { Name: 'What is XR?', Path: [ 'pages','what-is-xr' ] },
         { Name: 'Why Rebel?', Path: [ 'pages','why-rebel' ] },
-        { Name: 'Get Involved', Path: [ 'pages','get-involved' ] },
+        { Name: 'Get Involved', Path: [ 'get-involved' ] },
         { Name: 'Events', Path: [ 'events' ] },
         { Name: 'News', Path: [ 'news' ] },
         { Name: 'Find Your Group', Path: [ 'groups' ] },
-        { Name: 'Donate', Path: [ 'pages','donate' ] }
+        { Name: 'Donate', Path: [ 'donate' ] }
     ];
 
     readonly menuGroupsFooter: MenuGroup[] = [
         { Name: 'About', Menu: [
-            { Name: 'Issues', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Demands', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'About Us', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Principles & Values', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'Home', Path: [ '/', ] },
+            { Name: 'What Is XR', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'Why Rebel', Path: [ 'pages','why-rebel' ] },
+            { Name: 'Principles & Demands', Path: [ 'pages','demands' ] },
         ] },
         { Name: 'Act', Menu: [
-            { Name: 'Join Us', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'Get Involved', Path: [ 'get-involved' ] },
+            { Name: 'Upcoming Events', Path: [ 'events' ] },
+            { Name: 'Find Your Group', Path: [ 'groups' ] },
             { Name: 'Donate', Path: [ 'donate' ] },
-            { Name: 'Upcoming events', Path: [ 'events' ] },
-            { Name: 'Find a local group', Path: [ 'groups' ] },
-            { Name: 'Volunteer', Path: [ 'pages','what-is-xr' ] },
         ] },
         { Name: 'Other', Menu: [
             { Name: 'News', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Media Coverage', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Press releases', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Global Site', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'Global Site', Path: [ 'EXTERNAL','https://rebellion.global/' ] },
         ] },
         { Name: 'Get In Touch', Menu: [
-            { Name: 'Email', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Facebook', Path: [ 'pages','what-is-xr' ] },
-            { Name: 'Twitter', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'Email', Path: [ 'EMAIL','kiaora@extinctionrebellion.nz' ] },
+            { Name: 'Facebook', Path: [ 'EXTERNAL','https://www.facebook.com/xr.newzealand/' ] },
+            { Name: 'Instagram', Path: [ 'EXTERNAL','https://www.instagram.com/xrauckland/' ] },
+            { Name: 'Twitter', Path: [ 'EXTERNAL','https://twitter.com/ExtinctionNZ' ] },
         ] },                        
     ]
 

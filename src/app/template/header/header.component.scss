@@ -8,6 +8,10 @@
     justify-content: space-between;    
 }
 
+.menu-active{
+    color: #5dce73 !important; 
+}
+
 ul {
     display: flex;
     flex-wrap: wrap;    
@@ -31,4 +35,5 @@ ul {
 
 img {
     margin-left: 1rem;
+    cursor: pointer;
 }

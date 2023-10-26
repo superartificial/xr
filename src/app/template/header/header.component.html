@@ -1,10 +1,10 @@
 <div id="menu-content">
 
-<img src="assets/images/xr-logo-small.png" alt="XR Logo. Click to return to home page.">
+<a [routerLink]="[ '/' ]" ><img src="assets/images/xr-logo-small.png"  alt="XR Logo. Click to return to home page."></a>
 
 <ul class="menu">
     <li *ngFor="let menuItem of menuService.menuItemsHeader" >
-        <a routerLinkActive="menu-active-eu"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
+        <a routerLinkActive="menu-active"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
     </li>
 </ul>
 

@@ -5,7 +5,9 @@
             <h5>{{ menuGroup.Name }}</h5>
             <ul class="menu">
                 <li *ngFor="let menuItem of menuGroup.Menu">
-                    <a routerLinkActive="menu-active-eu"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
+                    <a routerLinkActive="menu-active-eu"  [routerLink]="menuItem.Path" *ngIf="menuItem.Path[0]!='EXTERNAL' && menuItem.Path[0]!='EMAIL'" >{{ menuItem.Name }}</a>
+                    <a [href]="menuItem.Path[1]" target="_new" *ngIf="menuItem.Path[0]==='EXTERNAL'" >{{ menuItem.Name }}</a>
+                    <a [href]="'mailto:' + menuItem.Path[1]" *ngIf="menuItem.Path[0]==='EMAIL'" >{{ menuItem.Name }}</a>
                 </li>
             </ul>
         </div>

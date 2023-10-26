@@ -17,6 +17,14 @@ import { NewItemSummaryComponent } from './news/new-item-summary/new-item-summar
 import { EventSummaryComponent } from './events/event-summary/event-summary.component';
 import { EventViewComponent } from './events/event-view/event-view.component';
 import { MatDialogModule } from "@angular/material/dialog";
+import { PageDonateComponent } from './pages/page-donate/page-donate.component';
+import { GetInvolvedComponent } from './pages/get-involved/get-involved.component';
+import { VolunteerComponent } from './pages/get-involved/volunteer/volunteer.component';
+import { NewsletterSignupComponent } from './pages/get-involved/newsletter-signup/newsletter-signup.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './pages/home/home.component';
+import { PageViewComponent } from './pages/page-view/page-view.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +40,22 @@ import { MatDialogModule } from "@angular/material/dialog";
     LocalGroupComponent,
     NewItemSummaryComponent,
     EventSummaryComponent,
-    EventViewComponent
+    EventViewComponent,
+    PageDonateComponent,
+    GetInvolvedComponent,
+    VolunteerComponent,
+    NewsletterSignupComponent,
+    HomeComponent,
+    PageViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTabsModule,
+    BrowserAnimationsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

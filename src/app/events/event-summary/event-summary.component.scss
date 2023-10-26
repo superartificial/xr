@@ -2,6 +2,10 @@
     height: 330px;
     border: 1pt solid #000;
     cursor: pointer;
+    color: #fff;
+    font-size: 0.95rem;
+    background-color: #000;
+    font-family: RobotoCondensed;    
 }
 
 #event-summary-head {
@@ -11,6 +15,19 @@
     background-repeat: no-repeat;
     margin-top: 0;
 }
+
+#event-summary-details {
+    padding-left: 0.2rem;
+    p {
+        margin: 0.1rem;
+
+    }
+}
+p.venue {
+    font-size: 0.75rem;
+    color: #ccc;
+}
+
 
 h3 {
     color: #ffffff;
