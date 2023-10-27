@@ -25,6 +25,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './pages/home/home.component';
 import { PageViewComponent } from './pages/page-view/page-view.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidebarComponent } from './template/sidebar/sidebar.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,9 @@ import { PageViewComponent } from './pages/page-view/page-view.component';
     VolunteerComponent,
     NewsletterSignupComponent,
     HomeComponent,
-    PageViewComponent
+    PageViewComponent,
+    SidebarComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -54,8 +59,9 @@ import { PageViewComponent } from './pages/page-view/page-view.component';
     HttpClientModule,
     MatDialogModule,
     MatTabsModule,
-    BrowserAnimationsModule
-    
+    BrowserAnimationsModule,
+    MatSidenavModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

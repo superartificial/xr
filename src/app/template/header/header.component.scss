@@ -13,7 +13,7 @@
 }
 
 ul {
-    display: flex;
+    display: none;    
     flex-wrap: wrap;    
     justify-content: flex-end;
     align-items: center;
@@ -36,4 +36,21 @@ ul {
 img {
     margin-left: 1rem;
     cursor: pointer;
+}
+
+#icon-hamburger {
+    display: block;
+    height: 48px;
+    width: 48px;
+    margin: .8rem 1rem;    
+}
+
+@media screen and (min-width: 870px) {
+    ul {
+        display: flex;
+    }    
+    #icon-hamburger {
+        display: none;
+    }
+      
 }

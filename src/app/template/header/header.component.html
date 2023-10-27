@@ -1,11 +1,17 @@
 <div id="menu-content">
 
-<a [routerLink]="[ '/' ]" ><img src="assets/images/xr-logo-small.png"  alt="XR Logo. Click to return to home page."></a>
+<nav role="navigation" class="eu">    
+    <a [routerLink]="[ '/' ]" ><img src="assets/images/xr-logo-small.png"  alt="XR Logo. Click to return to home page."></a>
+</nav>
 
 <ul class="menu">
     <li *ngFor="let menuItem of menuService.menuItemsHeader" >
         <a routerLinkActive="menu-active"  [routerLink]="menuItem.Path">{{ menuItem.Name }}</a>
     </li>
 </ul>
+<div id="icon-hamburger">
+    <a ><img src="assets/images/icons/hamburger-black.svg" alt="User" class="nav-icon" (click)="onToggleSidenav()" /></a>
+</div>     
+
 
 </div>

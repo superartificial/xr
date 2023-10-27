@@ -1,18 +1,13 @@
-<app-header></app-header>
+<app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation" position="end" >
+    <app-sidebar (closeSidenav)="sidenav.close()"></app-sidebar>    
+  </mat-sidenav>
+  <mat-sidenav-content>
 
-<main >                        
-  <router-outlet ></router-outlet>                
-</main>
-
-<app-footer></app-footer> 
-
-<!-- 
-  <div *ngFor="let post of posts" [innerHTML]="post.content.rendered">
-    <p>Here is a paragraph</p>
-</div> -->
-
-  <!-- this div is the target for our HTML insertion 
-
-<div id='can-fundraising-area-extinctionrebellionnz-donate' style='width: 100%'>
-</div>
--->
+      <main >                        
+        <router-outlet ></router-outlet>                
+      </main>
+    <app-footer></app-footer> 
+  </mat-sidenav-content>  
+</mat-sidenav-container>

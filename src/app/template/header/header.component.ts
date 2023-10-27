@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { MenuService, MenuItem } from '../menu.service';
 import { Router } from '@angular/router';
 
@@ -9,9 +9,15 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
+  @Output() sidenavToggle = new EventEmitter<void>();  
+
   constructor(
     public menuService: MenuService,
     private router: Router
     ) { }
+
+  public onToggleSidenav() {
+    this.sidenavToggle.emit();
+  }    
 
 }
