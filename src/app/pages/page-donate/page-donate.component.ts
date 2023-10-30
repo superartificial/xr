@@ -39,7 +39,7 @@ export class PageDonateComponent implements OnInit, OnDestroy {
 
   private loadPageContent(slug: string) {
     this.wpService.getPage(slug).subscribe((result) => {
-      this.page = result[0];
+      this.page = result;
       console.log(this.page);
     });
   }

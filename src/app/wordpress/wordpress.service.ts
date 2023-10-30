@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { of as observableOf, Observable } from 'rxjs';
 import { Post } from '../model/post.model';
 import { Page } from '../model/page.model';
 import { NewsItem } from '../model/news-item.model';
 import { CalendarEvent, EventResponseData } from '../model/event.model';
-import { map } from "rxjs/operators";
+import { map, tap } from "rxjs/operators";
 import { environment } from '../../environments/environment';
 import { formatDate } from '@angular/common';
 
@@ -14,6 +14,7 @@ import { formatDate } from '@angular/common';
 export class WordpressService {
 
     private posts: Post[] = [];
+    private pages: Page[] = [];
     private postsUpdated = new Subject<Post[]>();
 
     constructor( private http: HttpClient ) {
@@ -26,7 +27,6 @@ export class WordpressService {
     }
 
     getPosts() {
-        // return [...this.posts];
         // don't need to unsubscribe as for build in observables this is handled by angular
         this.http.get<Post[]>(`${environment["api-endpoint"]}wp/v2/posts`)
           .subscribe(
@@ -43,14 +43,51 @@ export class WordpressService {
         return this.http.get<EventResponseData>(url);        
       }
 
-      getPage(id: string): Observable<Page> {
-        // return [...this.posts];
+      getPage(slug: string): Observable<Page> {
         // don't need to unsubscribe as for build in observables this is handled by angular
-        return this.http.get<Page[]>(`${environment["api-endpoint"]}wp/v2/pages?slug=${ id }`);
+
+        let loadedPage = this.pages.filter(page => page['slug']===slug);
+        if(loadedPage.length>0) {
+          console.log('cached',slug)
+          return observableOf(loadedPage[0]);
+          
+        } else {
+          return this.http.get<Page[]>(`${environment["api-endpoint"]}wp/v2/pages?slug=${ slug }`).pipe(
+            tap(result => {
+              if(result.length>0) {
+                this.pages.push(result[0]);
+                console.log('PAGES 2:', this.pages)
+              }
+            }),
+            map(
+              result => result[0]
+            )
+          );
+        }
       }  
+
+      /*
+      / Improve this to take an array of pages to load, or a catergory
+      / Also change the check to determine if all required pages are in cached array instead of by length
+      */
+      preloadPages(): Observable<Page[]> {
+        if(this.pages.length<4) {
+          return this.http.get<Page[]>(`${environment["api-endpoint"]}wp/v2/pages?slug=get-involved,why-rebel,donate,principles`).pipe(
+            tap(result => {
+              if(result.length>0) {
+                this.pages = this.pages.concat(result);
+                console.log('PAGES:', this.pages)
+              } else {
+                console.log('none')
+              }
+            })
+          );
+        } else {
+          return observableOf(this.pages);          
+        }
+      }
       
       getNewsItem(id: string): Observable<Page> {
-        // return [...this.posts];
         // don't need to unsubscribe as for build in observables this is handled by angular
         return this.http.get<Post[]>(`${environment["api-endpoint"]}wp/v2/posts?slug=${ id }`);
       }        

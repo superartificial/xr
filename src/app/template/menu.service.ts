@@ -32,7 +32,7 @@ export interface MenuGroup {
             { Name: 'Home', Path: [ '/', ] },
             { Name: 'What Is XR', Path: [ 'pages','what-is-xr' ] },
             { Name: 'Why Rebel', Path: [ 'pages','why-rebel' ] },
-            { Name: 'Principles & Demands', Path: [ 'pages','demands' ] },
+            { Name: 'Principles & Demands', Path: [ 'pages','principles' ] },
         ] },
         { Name: 'Act', Menu: [
             { Name: 'Get Involved', Path: [ 'get-involved' ] },
@@ -41,7 +41,7 @@ export interface MenuGroup {
             { Name: 'Donate', Path: [ 'donate' ] },
         ] },
         { Name: 'Other', Menu: [
-            { Name: 'News', Path: [ 'pages','what-is-xr' ] },
+            { Name: 'News', Path: [ 'news' ] },
             { Name: 'Global Site', Path: [ 'EXTERNAL','https://rebellion.global/' ] },
         ] },
         { Name: 'Get In Touch', Menu: [
