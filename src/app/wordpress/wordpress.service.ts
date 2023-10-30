@@ -20,6 +20,11 @@ export class WordpressService {
 
     }
 
+    sendContactForm(formData: any): Observable<any>  {
+      let url = `${environment["api-endpoint"]}contact-form-7/v1/contact-forms/2101/feedback`;
+      return this.http.post<any>(url,formData);  
+    }
+
     getPosts() {
         // return [...this.posts];
         // don't need to unsubscribe as for build in observables this is handled by angular
@@ -33,8 +38,8 @@ export class WordpressService {
       }
 
       getEvents(futureOnly: boolean): Observable<EventResponseData> {
-        let url = `${environment["api-endpoint"]}tribe/events/v1/events`;
-        if(futureOnly) { url += '?start_date=now' }
+        let url = `${environment["api-endpoint"]}tribe/events/v1/events?categories=[public-homepage`;
+        if(futureOnly) { url += '&start_date=now' }
         return this.http.get<EventResponseData>(url);        
       }
 

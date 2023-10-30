@@ -28,6 +28,8 @@ import { PageViewComponent } from './pages/page-view/page-view.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarComponent } from './template/sidebar/sidebar.component';
 import {MatListModule} from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
+import { ContactFormComponent } from './forms/contact-form/contact-form.component';   
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import {MatListModule} from '@angular/material/list';
     HomeComponent,
     PageViewComponent,
     SidebarComponent,
+    ContactFormComponent,
     
   ],
   imports: [
@@ -61,7 +64,8 @@ import {MatListModule} from '@angular/material/list';
     MatTabsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    FormsModule                    
   ],
   providers: [],
   bootstrap: [AppComponent]

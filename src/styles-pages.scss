@@ -1,0 +1,127 @@
+.header-bg-img {
+    width: 100%;
+    max-width: default;
+    min-height: 200px;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 1.5rem 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: middle center;  
+    background-size: auto 100%;  
+    font-family: "CrimsonRegular";  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;     
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .header-bg-img {
+        background-size: 100% auto;  
+        transition: ease all 1s;
+    }
+}
+
+.header-bg-who-we-are {
+    background-image: url("assets/images/header-bgs/bowen-street.jpg");
+}
+
+.header-bg-get-involved {
+    background-image: url("assets/images/header-bgs/act-header-2.jpg");
+    text-align: center;
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.header-bg-local-groups {
+    background-image: url("assets/images/header-bgs/protest-wellington.jpg");
+    background-position: middle center;
+    min-height: 120px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding-top: 3rem;
+
+}
+
+.header-bg-why-rebel {
+    background-image: url("assets/images/header-bgs/pink-car.jpg");
+    > div > div {
+        background-color: rgba(0,0,0,.6);
+        padding: 0.1rem 0.5rem;
+    }
+}
+
+
+.header-bg-principles {
+    background-image: url("assets/images/header-bgs/bg-demands.jpg");
+    transition: ease all 1s;    
+    > div > div {
+        background-color: rgba(0,0,0,.6);
+        padding: 0.1rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .header-bg-principles {
+        background-position: 80% center;
+        transition: ease all 1s;
+    }
+}
+
+/* DEMANDS */
+
+ol {
+    list-style-type: decimal;
+    margin-top: 0;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        p {
+            width: 50%;
+        }
+        p:first-of-type {
+            font-weight: bold;
+        }        
+    }
+    hr {
+        margin: 0 auto;
+        width: 60%;
+        border-bottom: 1px solid #F00;
+    }
+}
+
+.page-2-col {
+    display: grid;
+    grid-column-gap: 1rem;
+    grid-template-columns: repeat(2, 50%);
+    h2 {
+        margin: 1rem auto 0 auto;
+    }
+    h4 {
+        text-align: center;
+        margin: 1rem auto 0 auto;
+    }
+}
+
+.section-demands-requests {
+    font-weight: bold;
+    text-align: center;
+    div {
+        text-align: center;
+    }
+    p {
+        font-style: italic;
+    }
+
+    h2 {
+        margin: 1rem auto 0 auto;
+    }    
+}

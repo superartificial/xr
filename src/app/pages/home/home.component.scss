@@ -34,6 +34,9 @@ section {
     min-width: 100%;
     width: 100%;
     font-family: "CrimsonRegular";    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
     h2 {
         font-size: 3rem;
         margin-bottom: 0.5rem;
@@ -42,10 +45,15 @@ section {
     h4 {
         font-size: 2rem; 
         margin-bottom: 1rem;
-        margin-top: 2rem;               
     }
     p {
         margin: 0.8rem 0;
+    }
+    div {
+        width: 90%;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0.75rem;
     }
 
 }
@@ -70,19 +78,26 @@ section {
     background-repeat: no-repeat;
     background-size: auto 100% ;
     background-color: rgb(218, 235, 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
     h4,p {
-        margin-left: 12vw;
+        
         width: 500px;
+        transition: ease all 1s;
+        background: rgba(218, 235, 248,.8);
     }
 }
 #section-control {
     background-image: url("../../../assets/images/home/control-min.jpg");
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: auto 100% ;
+    background-size: auto 101% ;
     background-color: rgb(248, 199, 224);
     h4,p {
-        margin-right: 12vw;
+        transition: ease all 1s;
+        background: rgba(248, 199, 224,.8);
+       
         margin-left: auto;
         width: 500px;
     }
@@ -91,6 +106,77 @@ section {
 #section-mana {
     background-image: url("../../../assets/images/home/sky-dusk.jpg");    
     background-repeat: no-repeat;
-    background-size: 100% auto;    
-    background-position: middle;    
+    background-size: auto 101%;    
+    background-position: center bottom; 
+    display: flex;
+    justify-content: center; /* Center horizontally */       
+
+    h4 {
+        background-color: default;
+        transition: ease all 1s;
+    }
+    p {
+        transition: ease all 1s;
+        background-color: rgba(130, 125, 129,.75);    
+        font-weight: bold;    
+        padding: 0.25rem;
+        &.link {
+            text-align: right;
+            font-weight: normal;
+        }        
+    }
 }
+
+.header-bg-home {
+    background-position: center;  
+    background-size: auto 100%;      
+    background-image: url("../../../assets/images/header-bgs/Road-Sign-Final-Climate-Disaster2.jpg");
+    height: 150px !important;
+    max-height: 150px !important;
+    padding-top: 1rem;
+    background-attachment:initial;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: ease all 1s;
+    div {
+        text-align: center;
+    }    
+    h1 {
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 775px) {
+    .header-bg-home {
+        background-size: 100% auto;  
+        transition: ease all 1s;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    #section-control, #section-everybody {
+        background: default;
+    }
+    
+}
+
+@media screen and (min-width: 1300px) {
+    .header-bg-home {
+        height: 250px !important;   
+        max-height: 250px !important;       
+        background-size: 100% auto;     
+        transition: ease all 1s; 
+    }
+    #section-mana {
+        background-size: 100% auto;    
+        h4 {
+            transition: ease all 1s;
+            background-color: rgba(198, 156, 116,.8);
+        }
+    }        
+}  

@@ -33,7 +33,7 @@ export class PageDonateComponent implements OnInit, OnDestroy {
       script.onload = () => {
         console.log('script loaded');    
       };
-      //this.renderer.appendChild(this.elementRef.nativeElement, script);
+      this.renderer.appendChild(this.elementRef.nativeElement, script);
       
   }  
 

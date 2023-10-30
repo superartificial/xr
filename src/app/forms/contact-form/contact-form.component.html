@@ -1,0 +1,28 @@
+<form  #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+    <input type="hidden" name="contact-form-id" value="2101">
+    <input type="hidden" name="action" value="grunion-contact-form">
+    <input type="hidden" name="contact-form-hash" value="f8bfebca47866ae810194e9845603cc19910f933">  
+ 
+    <p>
+      <label for="firstname">First Name</label>
+      <input type="text" id="name" name="g2101-name" ngModel>
+    </p>
+   
+    <p>
+        <label for="email">Email </label>
+        <input type="text" id="email" name="g2101-email" ngModel>
+      </p>
+     
+      <p>
+        <label for="message">Message </label>
+        <input type="text" id="message" name="g2101-message" ngModel>
+      </p>
+     
+       
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+   
+  </form>
+   

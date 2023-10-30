@@ -63,7 +63,7 @@ export class PageComponent implements OnInit, OnDestroy {
         content = content.substring(0,content.length-5);
       }
     }  
-    console.log('content',content, content.lastIndexOf('</p>'), content.length)
+    // console.log('content',content, content.lastIndexOf('</p>'), content.length)
     return content;    
   }
 
